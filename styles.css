@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Animación de desvanecimiento para el título */
 h1 {
     animation: aparecer 2s ease-in-out;
 }
@@ -11,6 +12,19 @@ h1 {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Animación del mensaje con desplazamiento */
+#mensaje {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#mensaje.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animación del botón al pasar el mouse */
 button {
     transition: transform 0.3s ease-in-out;
 }
